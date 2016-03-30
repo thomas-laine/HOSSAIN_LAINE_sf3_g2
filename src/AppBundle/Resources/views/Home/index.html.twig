@@ -1,0 +1,16 @@
+{% extends ('::base.html.twig') %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <!-- <link rel="stylesheet" href=""> -->
+{% endblock %}
+
+{% block title %}
+    {{ parent() ~ ' - homepage' }}
+{% endblock %}
+
+
+{% block body %}
+    {{ parent() }}
+    <p>This is my new page</p>
+{% endblock %}
