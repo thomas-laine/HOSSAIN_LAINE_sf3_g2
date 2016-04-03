@@ -1,4 +1,11 @@
-body {
-    background: green;
+li {
+    list-style: none;
+}
 
+a {
+    color: black;
+}
+
+span a {
+    color: white;
 }

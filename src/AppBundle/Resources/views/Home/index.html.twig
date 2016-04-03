@@ -1,16 +1,19 @@
-{% extends ('::base.html.twig') %}
+{% extends('::base.html.twig') %}
 
 {% block stylesheets %}
     {{ parent() }}
-    <!-- <link rel="stylesheet" href=""> -->
+    <link rel="" href="">
 {% endblock %}
 
 {% block title %}
     {{ parent() ~ ' - homepage' }}
 {% endblock %}
 
-
 {% block body %}
     {{ parent() }}
-    <p>This is my new page</p>
+    <p>This is my home page !</p>
+
+    <h1>Liste d'articles</h1>
+    {% include('AppBundle:Article/Partial:list.html.twig') %}
+
 {% endblock %}

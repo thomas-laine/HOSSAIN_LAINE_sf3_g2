@@ -1,0 +1,29 @@
+<ul>
+    {% for article in articles %}
+    <ul class="list-group">
+        <li class="list-group-item col-md-offset-1 col-md-10">
+
+            <a href="{{ path('article_id', {'id' : article.id}) }}"><h4>{{ article.title }}</a> (id de l'article : {{ article.id }})</h4>
+            Auteur : <a href="{{ path('article_author', { 'author': article.author}) }}">{{ article.author }}</a>, le {{ article.createdAt|date('d/m/Y') }}.
+            <br><br>
+            <p>{{ article.content }}
+                <br><br>
+
+                <button class="btn btn-default"><a href="{{ path('article_del', {'id': article.id}) }}">Supprimer</a></button>
+                <button class="btn btn-default"><a href="{{ path('article_update', {'id': article.id}) }}">Modifier</a></button>
+
+                <br><br>
+                {% if (article.tag) %}
+                    Tags : <br>
+                    <span class="badge col-md-1"><a href="{{ path('article_tag', {'tag': article.tag}) }}">{{ article.tag }}</a></span>
+                {% endif %}
+            </p>
+        </li>
+        <br>
+        </ul>
+        <br>
+    {% else %}
+        <li>Pas d'article trouvé !</li>
+    {% endfor %}
+</ul>
+

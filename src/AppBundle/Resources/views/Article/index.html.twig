@@ -1,1 +1,7 @@
-Article - {{ articleName }}
+{% extends('::base.html.twig') %}
+
+{% block body %}
+
+    <h1 class="col-md-offset-2">Liste d'articles</h1>
+    {% include('AppBundle:Article/Partial:list.html.twig') %}
+{% endblock %}

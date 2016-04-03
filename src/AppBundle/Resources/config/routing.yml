@@ -1,8 +1,17 @@
-app_homepage:
-  resource: "@AppBundle/Controller/Article/"
-  type:     annotation
-  prefix:   /article
 home:
-  resource: "@AppBundle/Controller/HomeController.php"
-  type: annotation
+   resource: "@AppBundle/Controller/HomeController.php"
+   type: annotation
+
+article:
+   resource: "@AppBundle/Controller/Article/"
+   type: annotation
+   prefix: /article
+
+movie:
+   resource: "@AppBundle/Controller/Movie/"
+   type: annotation
+   prefix: /movie
+
+
+
 
